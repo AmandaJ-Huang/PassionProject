@@ -4,4 +4,4 @@ Find a Table Topper is an app for helping users pick a tabletop game (i.e., boar
 
 Users can also register an account and add any games they already own. This can be factored into their search, in case the user wants to be recommended a new game or not.
 
-I will make this site using Angular (front-end), SQL DB (middle), Java and Spring (back-end), and Heroku (app hosting).
+I will make this app using Angular (front-end), SQL DB (middle), Java and Spring (back-end), and Heroku (app hosting).
