@@ -1,0 +1,149 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-boardgames-heading" data-cy="BoardgamesCreateUpdateHeading" jhiTranslate="fmbgApp.boardgames.home.createOrEditLabel">
+        Create or edit a Boardgames
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.thumbnail_url" for="field_thumbnail_url">Thumbnail Url</label>
+          <input
+            type="text"
+            class="form-control"
+            name="thumbnail_url"
+            id="field_thumbnail_url"
+            data-cy="thumbnail_url"
+            formControlName="thumbnail_url"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.primary_name" for="field_primary_name">Primary Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="primary_name"
+            id="field_primary_name"
+            data-cy="primary_name"
+            formControlName="primary_name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.minplayers" for="field_minplayers">Minplayers</label>
+          <input
+            type="number"
+            class="form-control"
+            name="minplayers"
+            id="field_minplayers"
+            data-cy="minplayers"
+            formControlName="minplayers"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.maxplayers" for="field_maxplayers">Maxplayers</label>
+          <input
+            type="number"
+            class="form-control"
+            name="maxplayers"
+            id="field_maxplayers"
+            data-cy="maxplayers"
+            formControlName="maxplayers"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.suggested_numplayers" for="field_suggested_numplayers"
+            >Suggested Numplayers</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="suggested_numplayers"
+            id="field_suggested_numplayers"
+            data-cy="suggested_numplayers"
+            formControlName="suggested_numplayers"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.playingtime" for="field_playingtime">Playingtime</label>
+          <input
+            type="number"
+            class="form-control"
+            name="playingtime"
+            id="field_playingtime"
+            data-cy="playingtime"
+            formControlName="playingtime"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.suggested_playerage" for="field_suggested_playerage"
+            >Suggested Playerage</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="suggested_playerage"
+            id="field_suggested_playerage"
+            data-cy="suggested_playerage"
+            formControlName="suggested_playerage"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.rating" for="field_rating">Rating</label>
+          <input type="number" class="form-control" name="rating" id="field_rating" data-cy="rating" formControlName="rating" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.rank" for="field_rank">Rank</label>
+          <input type="number" class="form-control" name="rank" id="field_rank" data-cy="rank" formControlName="rank" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.averageweight" for="field_averageweight">Averageweight</label>
+          <input
+            type="number"
+            class="form-control"
+            name="averageweight"
+            id="field_averageweight"
+            data-cy="averageweight"
+            formControlName="averageweight"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="fmbgApp.boardgames.category" for="field_category">Category</label>
+          <input type="text" class="form-control" name="category" id="field_category" data-cy="category" formControlName="category" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="boardgames">
+      <h2 data-cy="boardgamesDetailsHeading"><span jhiTranslate="fmbgApp.boardgames.detail.title">Boardgames</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ boardgames.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.thumbnail_url">Thumbnail Url</span></dt>
+        <dd>
+          <span>{{ boardgames.thumbnail_url }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.primary_name">Primary Name</span></dt>
+        <dd>
+          <span>{{ boardgames.primary_name }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.minplayers">Minplayers</span></dt>
+        <dd>
+          <span>{{ boardgames.minplayers }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.maxplayers">Maxplayers</span></dt>
+        <dd>
+          <span>{{ boardgames.maxplayers }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.suggested_numplayers">Suggested Numplayers</span></dt>
+        <dd>
+          <span>{{ boardgames.suggested_numplayers }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.playingtime">Playingtime</span></dt>
+        <dd>
+          <span>{{ boardgames.playingtime }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.suggested_playerage">Suggested Playerage</span></dt>
+        <dd>
+          <span>{{ boardgames.suggested_playerage }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.rating">Rating</span></dt>
+        <dd>
+          <span>{{ boardgames.rating }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.rank">Rank</span></dt>
+        <dd>
+          <span>{{ boardgames.rank }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.averageweight">Averageweight</span></dt>
+        <dd>
+          <span>{{ boardgames.averageweight }}</span>
+        </dd>
+        <dt><span jhiTranslate="fmbgApp.boardgames.category">Category</span></dt>
+        <dd>
+          <span>{{ boardgames.category }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/boardgames', boardgames.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

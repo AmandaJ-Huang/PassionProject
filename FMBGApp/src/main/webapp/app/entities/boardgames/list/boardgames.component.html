@@ -1,0 +1,136 @@
+<div>
+  <h2 id="page-heading" data-cy="BoardgamesHeading">
+    <span jhiTranslate="fmbgApp.boardgames.home.title">Boardgames</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadPage()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="fmbgApp.boardgames.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-boardgames"
+        [routerLink]="['/boardgames/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="fmbgApp.boardgames.home.createLabel"> Create a new Boardgames </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="boardgames?.length === 0">
+    <span jhiTranslate="fmbgApp.boardgames.home.notFound">No boardgames found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="boardgames && boardgames.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
+          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="thumbnail_url">
+            <span jhiTranslate="fmbgApp.boardgames.thumbnail_url">Thumbnail Url</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="primary_name">
+            <span jhiTranslate="fmbgApp.boardgames.primary_name">Primary Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="minplayers">
+            <span jhiTranslate="fmbgApp.boardgames.minplayers">Minplayers</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="maxplayers">
+            <span jhiTranslate="fmbgApp.boardgames.maxplayers">Maxplayers</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="suggested_numplayers">
+            <span jhiTranslate="fmbgApp.boardgames.suggested_numplayers">Suggested Numplayers</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="playingtime">
+            <span jhiTranslate="fmbgApp.boardgames.playingtime">Playingtime</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="suggested_playerage">
+            <span jhiTranslate="fmbgApp.boardgames.suggested_playerage">Suggested Playerage</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="rating">
+            <span jhiTranslate="fmbgApp.boardgames.rating">Rating</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="rank"><span jhiTranslate="fmbgApp.boardgames.rank">Rank</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="averageweight">
+            <span jhiTranslate="fmbgApp.boardgames.averageweight">Averageweight</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="category">
+            <span jhiTranslate="fmbgApp.boardgames.category">Category</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let boardgames of boardgames; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/boardgames', boardgames.id, 'view']">{{ boardgames.id }}</a>
+          </td>
+          <td>{{ boardgames.thumbnail_url }}</td>
+          <td>{{ boardgames.primary_name }}</td>
+          <td>{{ boardgames.minplayers }}</td>
+          <td>{{ boardgames.maxplayers }}</td>
+          <td>{{ boardgames.suggested_numplayers }}</td>
+          <td>{{ boardgames.playingtime }}</td>
+          <td>{{ boardgames.suggested_playerage }}</td>
+          <td>{{ boardgames.rating }}</td>
+          <td>{{ boardgames.rank }}</td>
+          <td>{{ boardgames.averageweight }}</td>
+          <td>{{ boardgames.category }}</td>
+          <td class="text-right">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/boardgames', boardgames.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/boardgames', boardgames.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(boardgames)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="boardgames && boardgames.length > 0">
+    <div class="row justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="row justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [(page)]="ngbPaginationPage"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="loadPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>
