@@ -108,11 +108,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.andrewswan</groupId>
-            <artifactId>bgg4j</artifactId>
-            <version>1.0</version>
-       </dependency>
-        <dependency>
             <groupId>tech.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
         </dependency>
