@@ -1,9 +1,12 @@
 ## Daily Progress Log
 
+### 2021-12-29
+* Fixed about button text
+![image info](./screenshots/2021-12-29_AboutButton.png)
+
 ### 2021-12-28
 * Researched Jackson XML package and was able to extract thumbnail url (see project link in 2021-12-27 > dev branch).
 * Added about component, module, and route. Also tried adding button, but running into error page:
-
 ![image info](./screenshots/2021-12-28_AboutPageButtonClick.png)
 
 ### 2021-12-27
