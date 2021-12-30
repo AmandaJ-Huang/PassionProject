@@ -3,6 +3,8 @@
 ### 2021-12-29
 * Fixed about button text
 ![image info](./screenshots/2021-12-29_AboutButton.png)
+* Scrapping jhipster and trying to build app from ground up
+    - trying to understand each piece from database to back-end to front-end (angular) and how everything connects
 
 ### 2021-12-28
 * Researched Jackson XML package and was able to extract thumbnail url (see project link in 2021-12-27 > dev branch).

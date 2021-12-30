@@ -4,4 +4,4 @@ Find Me a Board Game! is an app for helping users pick a tabletop game (i.e., bo
 
 Users can register an account where they will provide a username, password, and indicate if they are new or experienced players. In account settings, users can add to (via a drop down search box) or remove from (via a red `-` button) a list of owned games. This can be factored into their search, in case the user wants to be recommended only non-owned games or not. New players will also be given a preset list of 10 low complexity, but highly rated, games.
 
-I will make this app using Angular (front-end), SQL DB (middle), Java and Spring (back-end).
+I will make this app using Angular, Java/Spring Boot, Sql Database.
