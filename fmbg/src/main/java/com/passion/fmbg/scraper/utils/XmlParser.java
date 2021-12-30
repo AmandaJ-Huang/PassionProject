@@ -1,9 +1,9 @@
-package data.scraper.utils;
+package com.passion.fmbg.scraper.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.JacksonXmlModule;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import data.scraper.xmlattributes.Items;
+import com.passion.fmbg.scraper.xmlattributes.Items;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,6 +36,7 @@ public class XmlParser {
             return mapper.readValue(gameXml, Items.class);
         } catch (IOException e){
             logger.log(Level.INFO, "IOException? No problem.");
+            e.printStackTrace();
         }
         return new Items();
     }

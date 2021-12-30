@@ -1,5 +1,6 @@
 package data.scraper.utils;
 
+import com.passion.fmbg.scraper.utils.XmlParser;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,7 +9,7 @@ public class XmlParserTest {
     @Test
     public void testIsBoardGameTrue() {
         // Given
-        String gameId = "1";
+        String gameId = "2";
         XmlParser xp = new XmlParser(gameId);
 
         // Then

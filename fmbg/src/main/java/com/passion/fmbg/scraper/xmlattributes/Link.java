@@ -1,4 +1,4 @@
-package data.scraper.xmlattributes;
+package com.passion.fmbg.scraper.xmlattributes;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
@@ -11,6 +11,9 @@ public class Link {
 
     @JacksonXmlProperty
     private String value;
+
+    @JacksonXmlProperty
+    private String inbound;
 
     public String getType() {
         return type;

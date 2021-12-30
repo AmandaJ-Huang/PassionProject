@@ -10,7 +10,7 @@ public class Boardgames {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "bg_id")
+    @Column(name = "bgId")
     private Long bgId;
 
     private String thumbnail;

@@ -1,4 +1,4 @@
-package data.scraper.xmlattributes;
+package com.passion.fmbg.scraper.xmlattributes;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 
