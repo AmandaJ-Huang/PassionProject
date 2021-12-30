@@ -11,7 +11,7 @@ public class Item {
     private String type;
 
     @JacksonXmlProperty(isAttribute = true)
-    private BoardgameElement thumbnail;
+    private Thumbnail thumbnail;
 
     @JacksonXmlProperty(isAttribute = true, localName = "name")
     private List<Name> nameList;
@@ -71,7 +71,7 @@ public class Item {
         return type;
     }
 
-    public BoardgameElement getThumbnail() {
+    public Thumbnail getThumbnail() {
         return thumbnail;
     }
 

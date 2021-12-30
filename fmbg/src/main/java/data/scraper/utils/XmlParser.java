@@ -8,6 +8,7 @@ import data.scraper.entities.Items;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.stream.Collectors;
 
 public class XmlParser {
     private String rootURL = "https://www.boardgamegeek.com/xmlapi2/thing?id=0";
@@ -29,15 +30,113 @@ public class XmlParser {
             ObjectMapper mapper = new XmlMapper(module);
             URL url = new URL(rootURL + gameId + statsURI);
             InputStream gameXml = url.openStream();
-
             return mapper.readValue(gameXml, Items.class);
-
         } catch (IOException e){
             e.printStackTrace();
         }
-
         return new Items();
+    }
 
+    public Boolean isBoardGame() {
+        return parser().getItem() != null;
+    }
+
+    public String getThumbnailUrl() {
+        return parser()
+                .getItem()
+                .getThumbnail()
+                .getThumbnailUrl();
+    }
+
+    public String getPrimaryName() {
+        return parser()
+                .getItem()
+                .getNameList()
+                .stream()
+                .filter(name ->  name.getType().equals("primary"))
+                .collect(Collectors.toList())
+                .get(0)
+                .getValue();
+    }
+
+    public String getYearPublished() {
+        return parser()
+                .getItem()
+                .getYearpublished()
+                .getValue();
+    }
+
+    public String getMinPlayers() {
+        return parser()
+                .getItem()
+                .getMinPlayers()
+                .getValue();
+    }
+
+    public String getMaxPlayers() {
+        return parser()
+                .getItem()
+                .getMaxPlayers()
+                .getValue();
+    }
+
+    public String getPlayingTime() {
+        return parser()
+                .getItem()
+                .getPlayingTime()
+                .getValue();
+    }
+
+    public String getMinPlaytime() {
+        return parser()
+                .getItem()
+                .getMinPlaytime()
+                .getValue();
+    }
+
+    public String getMaxPlaytime() {
+        return parser()
+                .getItem()
+                .getMaxPlaytime()
+                .getValue();
+    }
+
+    public String getMinAge() {
+        return parser()
+                .getItem()
+                .getMinAge()
+                .getValue();
+    }
+
+    public String getGameCategories() {
+        return parser()
+                .getItem()
+                .getLinkList()
+                .stream()
+                .filter(link -> link.getType().equals("boardgamecategory"))
+                .collect(Collectors.toList())
+                .toString();
+    }
+
+    public String getUsersRated() {
+        return parser()
+                .getItem()
+                .getUsersRated()
+                .getValue();
+    }
+
+    public String getAverageRating() {
+        return parser()
+                .getItem()
+                .getAverage()
+                .getValue();
+    }
+
+    public String getDifficulty() {
+        return parser()
+                .getItem()
+                .getAverageWeight()
+                .getValue();
     }
 
 }
