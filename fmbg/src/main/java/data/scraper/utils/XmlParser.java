@@ -8,12 +8,15 @@ import data.scraper.entities.Items;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class XmlParser {
     private String rootURL = "https://www.boardgamegeek.com/xmlapi2/thing?id=0";
     private String statsURI = "&stats=1";
     private String gameId;
+    private final static Logger logger = Logger.getLogger(XmlParser.class.getName());
 
     public XmlParser() {
         this("1");
@@ -32,7 +35,7 @@ public class XmlParser {
             InputStream gameXml = url.openStream();
             return mapper.readValue(gameXml, Items.class);
         } catch (IOException e){
-            e.printStackTrace();
+            logger.log(Level.INFO, "IOException? No problem.");
         }
         return new Items();
     }
