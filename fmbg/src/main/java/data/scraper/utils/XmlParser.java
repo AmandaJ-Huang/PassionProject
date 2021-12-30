@@ -3,7 +3,7 @@ package data.scraper.utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.JacksonXmlModule;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import data.scraper.entities.Items;
+import data.scraper.xmlattributes.Items;
 
 import java.io.IOException;
 import java.io.InputStream;
