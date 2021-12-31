@@ -1,4 +1,4 @@
-package com.passion.fmbg.controllers;
+package com.passion.fmbg.config;
 
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.DefaultUriBuilderFactory;
 
-public class HttpClientWithRest {
+public class RestTemplateConfig {
 
     @Autowired
     private CloseableHttpClient httpClient;

@@ -36,21 +36,6 @@ public class BoardgameService {
     public Boardgames update(Long id, Boardgames newBgData) {
         Boardgames bgInDatabase = this.findById(id);
 
-        bgInDatabase.setThumbnail(newBgData.getThumbnail());
-        bgInDatabase.setGameUrl(newBgData.getGameUrl());
-        bgInDatabase.setPrimaryName(newBgData.getPrimaryName());
-        bgInDatabase.setYearPublished(newBgData.getYearPublished());
-        bgInDatabase.setMinPlayers(newBgData.getMinPlayers());
-        bgInDatabase.setMaxPlayers(newBgData.getMaxPlayers());
-        bgInDatabase.setPlayingTime(newBgData.getPlayingTime());
-        bgInDatabase.setMinPlaytime(newBgData.getMinPlaytime());
-        bgInDatabase.setMaxPlaytime(newBgData.getMaxPlaytime());
-        bgInDatabase.setMinAge(newBgData.getMinAge());
-        bgInDatabase.setCategory(newBgData.getCategory());
-        bgInDatabase.setUserRatings(newBgData.getUserRatings());
-        bgInDatabase.setAverageRating(newBgData.getAverageRating());
-        bgInDatabase.setDifficulty(newBgData.getDifficulty());
-
         bgInDatabase = bgrepo.save(bgInDatabase);
 
         return bgInDatabase;

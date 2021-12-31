@@ -1,55 +1,36 @@
 package com.passion.fmbg.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.mapping.Array;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-@Table(name = "bg", schema = "boardgames")
-public class Boardgames {
+@Table(name = "games")
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Boardgames implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue
+    Long id;
 
-    @Column(name = "bgId")
-    private Long bgId;
+    private String name;
+    private Integer year_published;
+    private Integer min_players;
+    private Integer max_players;
+    private Integer min_playtime;
+    private Integer max_playtime;
+    private Integer min_age;
+    private String description_preview;
+    private String thumb_url;
+    private String url;
 
-    private String thumbnail;
+    @Transient
+    private Array mechanics;
 
-    @Column(name = "gameurl")
-    private String gameUrl;
-
-    @Column(name = "primaryname")
-    private String primaryName;
-
-    @Column(name = "yearpublished")
-    private Integer yearPublished;
-
-    @Column(name = "minplayers")
-    private Integer minPlayers;
-
-    @Column(name = "maxplayers")
-    private Integer maxPlayers;
-
-    @Column(name = "playingtime")
-    private Integer playingTime;
-
-    @Column(name = "minplaytime")
-    private Integer minPlaytime;
-
-    @Column(name = "maxplaytime")
-    private Integer maxPlaytime;
-
-    @Column(name = "minage")
-    private Integer minAge;
-
-    private String category;
-
-    @Column(name = "user_ratings")
-    private Long userRatings;
-
-    @Column(name = "average_rating")
-    private Float averageRating;
-    private Float difficulty;
+    @Transient
+    private Array categories;
 
     public Long getId() {
         return id;
@@ -59,123 +40,99 @@ public class Boardgames {
         this.id = id;
     }
 
-    public Long getBgId() {
-        return bgId;
+    public String getName() {
+        return name;
     }
 
-    public void setBgId(Long bgId) {
-        this.bgId = bgId;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getThumbnail() {
-        return thumbnail;
+    public Integer getYear_published() {
+        return year_published;
     }
 
-    public void setThumbnail(String thumbnail) {
-        this.thumbnail = thumbnail;
+    public void setYear_published(Integer year_published) {
+        this.year_published = year_published;
     }
 
-    public String getGameUrl() {
-        return gameUrl;
+    public Integer getMin_players() {
+        return min_players;
     }
 
-    public void setGameUrl(String gameUrl) {
-        this.gameUrl = gameUrl;
+    public void setMin_players(Integer min_players) {
+        this.min_players = min_players;
     }
 
-    public String getPrimaryName() {
-        return primaryName;
+    public Integer getMax_players() {
+        return max_players;
     }
 
-    public void setPrimaryName(String primaryName) {
-        this.primaryName = primaryName;
+    public void setMax_players(Integer max_players) {
+        this.max_players = max_players;
     }
 
-    public Integer getYearPublished() {
-        return yearPublished;
+    public Integer getMin_playtime() {
+        return min_playtime;
     }
 
-    public void setYearPublished(Integer yearPublished) {
-        this.yearPublished = yearPublished;
+    public void setMin_playtime(Integer min_playtime) {
+        this.min_playtime = min_playtime;
     }
 
-    public Integer getMinPlayers() {
-        return minPlayers;
+    public Integer getMax_playtime() {
+        return max_playtime;
     }
 
-    public void setMinPlayers(Integer minPlayers) {
-        this.minPlayers = minPlayers;
+    public void setMax_playtime(Integer max_playtime) {
+        this.max_playtime = max_playtime;
     }
 
-    public Integer getMaxPlayers() {
-        return maxPlayers;
+    public Integer getMin_age() {
+        return min_age;
     }
 
-    public void setMaxPlayers(Integer maxPlayers) {
-        this.maxPlayers = maxPlayers;
+    public void setMin_age(Integer min_age) {
+        this.min_age = min_age;
     }
 
-    public Integer getPlayingTime() {
-        return playingTime;
+    public String getDescription_preview() {
+        return description_preview;
     }
 
-    public void setPlayingTime(Integer playingTime) {
-        this.playingTime = playingTime;
+    public void setDescription_preview(String description_preview) {
+        this.description_preview = description_preview;
     }
 
-    public Integer getMinPlaytime() {
-        return minPlaytime;
+    public String getThumb_url() {
+        return thumb_url;
     }
 
-    public void setMinPlaytime(Integer minPlaytime) {
-        this.minPlaytime = minPlaytime;
+    public void setThumb_url(String thumb_url) {
+        this.thumb_url = thumb_url;
     }
 
-    public Integer getMaxPlaytime() {
-        return maxPlaytime;
+    public String getUrl() {
+        return url;
     }
 
-    public void setMaxPlaytime(Integer maxPlaytime) {
-        this.maxPlaytime = maxPlaytime;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    public Integer getMinAge() {
-        return minAge;
+    public Array getMechanics() {
+        return mechanics;
     }
 
-    public void setMinAge(Integer minAge) {
-        this.minAge = minAge;
+    public void setMechanics(Array mechanics) {
+        this.mechanics = mechanics;
     }
 
-    public String getCategory() {
-        return category;
+    public Array getCategories() {
+        return categories;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public Long getUserRatings() {
-        return userRatings;
-    }
-
-    public void setUserRatings(Long userRatings) {
-        this.userRatings = userRatings;
-    }
-
-    public Float getAverageRating() {
-        return averageRating;
-    }
-
-    public void setAverageRating(Float averageRating) {
-        this.averageRating = averageRating;
-    }
-
-    public Float getDifficulty() {
-        return difficulty;
-    }
-
-    public void setDifficulty(Float difficulty) {
-        this.difficulty = difficulty;
+    public void setCategories(Array categories) {
+        this.categories = categories;
     }
 }
