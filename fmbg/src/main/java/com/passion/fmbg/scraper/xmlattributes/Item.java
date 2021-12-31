@@ -67,6 +67,9 @@ public class Item {
     private String result;
 
     // Getters
+    public String getType() {
+        return type;
+    }
 
     public Thumbnail getThumbnail() {
         return thumbnail;

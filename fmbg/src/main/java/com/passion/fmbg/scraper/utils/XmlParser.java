@@ -33,16 +33,27 @@ public class XmlParser {
             ObjectMapper mapper = new XmlMapper(module);
             URL url = new URL(rootURL + gameId + statsURI);
             InputStream gameXml = url.openStream();
+
+            Thread.sleep(6000);
+
             return mapper.readValue(gameXml, Items.class);
-        } catch (IOException e){
-            logger.log(Level.INFO, "IOException? No problem.");
+
+        } catch (IOException | InterruptedException e){
             e.printStackTrace();
         }
         return new Items();
     }
 
     public Boolean isBoardGame() {
-        return parser().getItem() != null;
+        return (parser().getItem() != null)
+                && (parser()
+                .getItem()
+                .getType()
+                .equals("boardgame"));
+    }
+
+    public String getGameType() {
+        return parser().getItem().getType();
     }
 
     public String getThumbnailUrl() {

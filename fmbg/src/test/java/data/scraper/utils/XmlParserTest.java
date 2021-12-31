@@ -17,6 +17,17 @@ public class XmlParserTest {
     }
 
     @Test
+    public void testBoardGameExpansionIsBoardGameFalse() {
+        // Given
+        String gameId = "86008";
+        XmlParser xp = new XmlParser(gameId);
+        System.out.println(xp.getGameType());
+
+        // Then
+        Assert.assertFalse(xp.isBoardGame());
+    }
+
+    @Test
     public void testIsBoardGameFalse() {
         // Given
         String gameId = "353519";

@@ -17,15 +17,24 @@ public class DataScraper implements Runnable {
     private String bggUrl = "https://boardgamegeek.com/boardgame/";
 
     public void run() {
-        String sqlStmt = "INSERT IGNORE into bg(bgId, thumbnail, gameurl, primaryname, yearpublished, minplayers, " +
-                "maxplayers, playingtime, minplaytime, maxplaytime, minage, category, " +
-                "user_ratings, average_rating, difficulty) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) " +
-                "ON DUPLICATE KEY" +
+        String sqlStmt = "INSERT IGNORE into " +
+                "bg(bgId, thumbnail, gameurl, primaryname, yearpublished, minplayers, maxplayers, " +
+                "playingtime, minplaytime, maxplaytime, minage, category, user_ratings, average_rating, difficulty) " +
+                "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) " +
+                "ON DUPLICATE KEY " +
                 "UPDATE bgId=bgId, thumbnail=thumbnail, gameurl=gameurl, primaryname=primaryname, " +
-                "yearpublished=yearpublished, minplayers=minplayers, maxplayers=maxplayers";
+                "yearpublished=yearpublished, minplayers=minplayers, maxplayers=maxplayers, " +
+                "playingtime=playingtime, minplaytime=minplaytime, maxplaytime=maxplaytime, minage=minage, " +
+                "category=category, user_ratings=user_ratings, average_rating=average_rating, difficulty=difficulty";
         try {
             Connection conn = DriverManager.getConnection(mysqlDb, mysqlUser, mysqlPwd);
             PreparedStatement ps = conn.prepareStatement(sqlStmt);
+            /**
+             * BGG XML API will return HTTP response codes 429 (Too Many Requests), 500 (Internal Server Error)
+             * or 503 (Service Unavailable)
+             * A 5-second delay is needed between each request
+             * Cannot realistically request 300k+ boardgames via bgg
+             */
             for (int i = 0; i < 5; i++) {
                 xmlParser = new XmlParser(String.valueOf(i));
 
