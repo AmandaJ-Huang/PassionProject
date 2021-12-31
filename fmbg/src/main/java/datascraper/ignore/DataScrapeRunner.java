@@ -1,4 +1,4 @@
-package com.passion.fmbg.scraper;
+package datascraper.ignore;
 
 public class DataScrapeRunner {
 

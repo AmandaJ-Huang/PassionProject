@@ -1,5 +1,9 @@
 ## Daily Progress Log
 
+### 2021-12-30
+* Switching from BGG XML API to Board Game Atlas API due to API call limitation. BGG API only allows 1 request ~5 seconds (~12 requests per minute) vs. Board Game Atlas allowing 60 requests per minute per client.
+* Was able to successfully use Jackson XML to parse BGG XML API, but will not be utilizing.
+
 ### 2021-12-29
 * Fixed about button text
 ![image info](./screenshots/2021-12-29_AboutButton.png)

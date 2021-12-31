@@ -1,6 +1,6 @@
-package com.passion.fmbg.scraper;
+package datascraper.ignore;
 
-import com.passion.fmbg.scraper.utils.XmlParser;
+import datascraper.ignore.utils.XmlParser;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

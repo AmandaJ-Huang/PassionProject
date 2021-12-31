@@ -1,14 +1,13 @@
-package com.passion.fmbg.scraper.utils;
+package datascraper.ignore.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.JacksonXmlModule;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.passion.fmbg.scraper.xmlattributes.Items;
+import datascraper.ignore.xmlattributes.Items;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 

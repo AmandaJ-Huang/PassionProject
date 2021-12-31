@@ -1,6 +1,6 @@
 package data.scraper.utils;
 
-import com.passion.fmbg.scraper.utils.XmlParser;
+import datascraper.ignore.utils.XmlParser;
 import org.junit.Assert;
 import org.junit.Test;
 
