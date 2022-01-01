@@ -14,13 +14,13 @@ public class RestTemplateConfig {
     @Autowired
     private CloseableHttpClient httpClient;
 
-    @Value("${https://www.boardgameatlas.com/api/docs/search}")
-    private String bgaApiHost;
+    @Value("${api.host.baseurl}")
+    private String apiHost;
 
     @Bean
     public RestTemplate restTemplate() {
         RestTemplate restTemplate = new RestTemplate(clientHttpRequestFactory());
-        restTemplate.setUriTemplateHandler(new DefaultUriBuilderFactory(bgaApiHost));
+        restTemplate.setUriTemplateHandler(new DefaultUriBuilderFactory(apiHost));
         return restTemplate;
     }
 

@@ -1,6 +1,6 @@
 package com.passion.fmbg.services;
 
-import com.passion.fmbg.entities.Boardgames;
+import com.passion.fmbg.entities.Games;
 import com.passion.fmbg.repos.BoardgamesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,31 +18,31 @@ public class BoardgameService {
         this.bgrepo = bgrepo;
     }
 
-    public Boardgames create(Boardgames bg) {
+    public Games create(Games bg) {
         return bgrepo.save(bg);
     }
 
-    public Boardgames findById(Long id) {
+    public Games findById(Long id) {
         return bgrepo.findById(id).get();
     }
 
-    public List<Boardgames> findAll() {
-        Iterable<Boardgames> allBg = bgrepo.findAll();
-        List<Boardgames> bgList = new ArrayList<>();
+    public List<Games> findAll() {
+        Iterable<Games> allBg = bgrepo.findAll();
+        List<Games> bgList = new ArrayList<>();
         allBg.forEach(bgList::add);
         return bgList;
     }
 
-    public Boardgames update(Long id, Boardgames newBgData) {
-        Boardgames bgInDatabase = this.findById(id);
+    public Games update(Long id, Games newBgData) {
+        Games bgInDatabase = this.findById(id);
 
         bgInDatabase = bgrepo.save(bgInDatabase);
 
         return bgInDatabase;
     }
 
-    public Boardgames deleteById(Long id) {
-        Boardgames bgToBeDeleted = this.findById(id);
+    public Games deleteById(Long id) {
+        Games bgToBeDeleted = this.findById(id);
         bgrepo.delete(bgToBeDeleted);
         return bgToBeDeleted;
     }

@@ -1,20 +1,22 @@
 package com.passion.fmbg.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.hibernate.mapping.Array;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "games")
+@JsonRootName(value = "games")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Boardgames implements Serializable {
+public class Games implements Serializable {
 
     @Id
-    @GeneratedValue
-    Long id;
+    @JsonProperty(value = "id")
+    private String id;
 
+    @JsonProperty(value = "name")
     private String name;
     private Integer year_published;
     private Integer min_players;
@@ -27,16 +29,16 @@ public class Boardgames implements Serializable {
     private String url;
 
     @Transient
-    private Array mechanics;
+    private Mechanics mechanics;
 
     @Transient
-    private Array categories;
+    private Categories categories;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -120,19 +122,19 @@ public class Boardgames implements Serializable {
         this.url = url;
     }
 
-    public Array getMechanics() {
+    public Mechanics getMechanics() {
         return mechanics;
     }
 
-    public void setMechanics(Array mechanics) {
+    public void setMechanics(Mechanics mechanics) {
         this.mechanics = mechanics;
     }
 
-    public Array getCategories() {
+    public Categories getCategories() {
         return categories;
     }
 
-    public void setCategories(Array categories) {
+    public void setCategories(Categories categories) {
         this.categories = categories;
     }
 }
