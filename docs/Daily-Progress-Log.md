@@ -1,5 +1,10 @@
 ## Daily Progress Log
 
+### 2022-01-01
+* Happy New Year :)
+* Screenshot of successful Postman GET Request of consumed 3rd party API (Board Game Atlas) 
+![image info](./screenshots/2022-01-01_GET-OK.png)
+
 ### 2021-12-30
 * Switching from BGG XML API to Board Game Atlas API due to API call limitation. BGG API only allows 1 request ~5 seconds (~12 requests per minute) vs. Board Game Atlas allowing 60 requests per minute per client.
 * Was able to successfully use Jackson XML to parse BGG XML API, but will not be utilizing.

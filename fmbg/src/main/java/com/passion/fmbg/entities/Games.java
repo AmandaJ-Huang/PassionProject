@@ -11,7 +11,7 @@ public class Games implements Serializable {
 
     @JsonProperty
     private String id;
-
+    private String url;
     @JsonProperty
     private String name;
 
@@ -29,5 +29,9 @@ public class Games implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }
