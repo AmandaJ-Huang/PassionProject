@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 
 import java.io.Serializable;
 
-@JsonRootName("games")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Games implements Serializable {
 
