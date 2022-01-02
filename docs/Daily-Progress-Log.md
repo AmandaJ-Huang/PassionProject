@@ -1,5 +1,10 @@
 ## Daily Progress Log
 
+### 2022-01-02
+* Finder appears to function properly with various filters
+![image info](./screenshots/2022-01-02_DynamicSearch-minplayers-maxplayers-orderby.png)
+![image info](./screenshots/2022-01-02_DynamicSearch-mechanics-minage.png)
+
 ### 2022-01-01
 * Happy New Year :)
 * Screenshot of successful Postman GET Request of consumed 3rd party API (Board Game Atlas) 

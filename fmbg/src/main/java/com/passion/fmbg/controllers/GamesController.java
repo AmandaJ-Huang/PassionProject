@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @RestController
 public class GamesController {
@@ -26,49 +25,63 @@ public class GamesController {
 
     private Map<String, String> uriVariables;
 
-
     @GetMapping(value = "/finder")
-    public List<Games> findGames(String categories, String mechanics, Integer min_players, Integer max_players,
-                                 Integer min_playtime, Integer max_playtime, Integer min_age, String order_by,
+    public List<Games> findGames(String categories, String mechanics, Integer gt_min_players, Integer lt_max_players,
+                                 Integer gt_min_playtime, Integer lt_max_playtime, Integer gt_min_age, String order_by,
                                  String ascending) {
 
         try {
             uriVariables = new HashMap<>();
-            uriVariables.put("categories", categories);
-            uriVariables.put("mechanics", mechanics);
-            uriVariables.put("min_players", String.valueOf(min_players));
-            uriVariables.put("max_players", String.valueOf(max_players));
-            uriVariables.put("min_playtime", String.valueOf(min_playtime));
-            uriVariables.put("max_playtime", String.valueOf(max_playtime));
-            uriVariables.put("min_age", String.valueOf(min_age));
-            uriVariables.put("order_by", order_by);
-            uriVariables.put("ascending", ascending);
-            uriVariables.entrySet()
-                    .removeIf(entry -> entry.getValue() == null);
 
-            String input = "";
-
-            for (String s : uriVariables.keySet()) {
-                if (uriVariables.get(s) != null) {
-                    input += (s + "={" + s + "}&");
-                }
+            if (categories != null && !categories.isEmpty()) {
+                uriVariables.put("categories", categories);
             }
 
-            String url = bgApiUrl + "?" + input + "client_id=" + client_id;
+            if (mechanics != null && !mechanics.isEmpty()) {
+                uriVariables.put("mechanics", mechanics);
+            }
+
+            if (gt_min_players != null && !String.valueOf(gt_min_players).isEmpty()) {
+                uriVariables.put("gt_min_players", String.valueOf(gt_min_players-1));
+            }
+
+            if (lt_max_players != null && !String.valueOf(lt_max_players).isEmpty()) {
+                uriVariables.put("lt_max_players", String.valueOf(lt_max_players+1));
+            }
+
+            if (gt_min_playtime != null && !String.valueOf(gt_min_playtime).isEmpty()) {
+                uriVariables.put("gt_min_playtime", String.valueOf(gt_min_playtime-1));
+            }
+
+            if (lt_max_playtime != null && !String.valueOf(lt_max_playtime).isEmpty()) {
+                uriVariables.put("lt_max_playtime", String.valueOf(lt_max_playtime));
+            }
+
+            if (gt_min_age != null && !String.valueOf(gt_min_age).isEmpty()) {
+                uriVariables.put("gt_min_age", String.valueOf(gt_min_age-1));
+            }
+
+            if (order_by != null && !order_by.isEmpty()) {
+                uriVariables.put("order_by", order_by);
+            }
+
+            if (ascending != null && !ascending.isEmpty()) {
+                uriVariables.put("ascending", ascending);
+            }
 
             HttpHeaders headers = new HttpHeaders();
             HttpEntity requestEntity = new HttpEntity<>(headers);
             restTemplate = new RestTemplate();
 
             ResponseEntity<GamesList> response = restTemplate
-                    .exchange(url, HttpMethod.GET,
+                    .exchange(urlConstruct(), HttpMethod.GET,
                             requestEntity, GamesList.class, uriVariables);
 
             return response.getBody().getGames();
 
         } catch (Exception e) {
             List<Games> gameList = new ArrayList<>();
-            e.printStackTrace();
+            e.getMessage();
             return gameList;
         }
     }
@@ -77,9 +90,7 @@ public class GamesController {
         String input = "";
 
         for (String s : uriVariables.keySet()) {
-            if (uriVariables.get(s) != null) {
                 input += (s + "={" + s + "}&");
-            }
         }
 
         return bgApiUrl + "?" + input + "client_id=" + client_id;
