@@ -1,5 +1,10 @@
 ## Daily Progress Log
 
+### 2022-01-03
+* Front-end in progress
+* Need to connect finder with front-end
+![image info](./screenshots/2022-01-03_FrontEnd-Skeleton.png)
+
 ### 2022-01-02
 * Finder appears to function properly with various filters
 ![image info](./screenshots/2022-01-02_DynamicSearch-minplayers-maxplayers-orderby.png)
