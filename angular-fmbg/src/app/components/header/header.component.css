@@ -1,0 +1,23 @@
+mat-toolbar {
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 38px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.header-buttons {
+    margin: 8px 8px 8px 0;
+}
+
+.hover-button {
+    background-color: rgba(0,0,0,0);
+}
+.hover-button:hover {
+    background-color: rgba(0,0,0,0.5);
+}

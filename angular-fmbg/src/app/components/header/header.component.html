@@ -1,8 +1,14 @@
-<header>
-    <h1>{{ title }}</h1>
-</header>
+<!-- Angular Material Typography -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&family=Nunito:wght@500&display=swap" rel="stylesheet">
 
-<app-button
-    text="FIND ME A BOARD GAME!" 
-    (btnClick)="toggleFinderTask()">
-</app-button>
+<!-- Navigation -->
+<mat-toolbar color="primary">
+    <span><h1>{{ title }}</h1></span>
+    <span class="spacer"></span>
+    <span class="header-buttons">
+        <button mat-raised-button color="primary" class="hover-button" routerLink="/">Home</button> &nbsp;
+        <button mat-raised-button color="primary" class="hover-button" routerLink="/about">About</button> &nbsp;
+        <button mat-raised-button color="primary" class="hover-button" routerLink="/finder">Finder</button>
+    </span>
+</mat-toolbar>

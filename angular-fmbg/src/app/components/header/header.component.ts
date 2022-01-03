@@ -13,8 +13,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleFinderTask() {
-    console.log('toggle');
-  }
-
 }
