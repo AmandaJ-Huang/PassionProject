@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title: string = 'FMBG';
+  title: string = 'F M B G';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleFinderTask() {
+    console.log('toggle');
   }
 
 }
