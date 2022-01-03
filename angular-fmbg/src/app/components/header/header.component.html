@@ -1,14 +1,19 @@
-<!-- Angular Material Typography -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&family=Nunito:wght@500&display=swap" rel="stylesheet">
+<!-- Font Styles -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&family=Nunito:wght@500&family=Righteous&display=swap');
+    </style>
 
 <!-- Navigation -->
 <mat-toolbar color="primary">
-    <span><h1>{{ title }}</h1></span>
+    <img src="https://www.pngrepo.com/png/10144/180/strategy.png"/> &nbsp;
+    <h1>{{ title }}</h1>
     <span class="spacer"></span>
     <span class="header-buttons">
-        <button mat-flat-button color="primary" class="hover-button" routerLink="/">Home</button> &nbsp;
-        <button mat-flat-button color="primary" class="hover-button" routerLink="/about">About</button> &nbsp;
-        <button mat-flat-button color="primary" class="hover-button" routerLink="/finder">Finder</button>
+        <button mat-flat-button color="primary" routerLink="/">HOME</button> &nbsp;
+        <button mat-flat-button color="primary" routerLink="/about">ABOUT</button> &nbsp;
+        <button mat-flat-button color="primary" routerLink="/finder">FINDER</button>
     </span>
+    <button mat-mini-fab color="primary" class="mat-elevation-z0">
+        <mat-icon>settings</mat-icon>
+    </button>
 </mat-toolbar>

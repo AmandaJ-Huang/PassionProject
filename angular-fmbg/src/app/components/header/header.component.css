@@ -3,8 +3,15 @@ mat-toolbar {
 }
 
 h1 {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 38px;
+    font-family: 'Righteous', cursive;
+    font-size: 28px;
+}
+
+img {
+    width: 30px;
+    height: auto;
+    filter: invert(100%);
+    fill:white;
 }
 
 .spacer {
@@ -15,9 +22,6 @@ h1 {
     margin: 8px 8px 8px 0;
 }
 
-.hover-button {
-    background-color: rgba(0,0,0,0);
-}
-.hover-button:hover {
+button:hover, .mat-elevation-z0:hover {
     background-color: rgba(0,0,0,0.5);
 }
