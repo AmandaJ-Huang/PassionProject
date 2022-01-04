@@ -1,5 +1,8 @@
 ## Daily Progress Log
 
+### 2022-01-04
+* Need to fix routing > pages do not change to specified component
+
 ### 2022-01-03
 * Front-end in progress
 * Need to connect finder with front-end
