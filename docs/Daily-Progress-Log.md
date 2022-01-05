@@ -2,6 +2,8 @@
 
 ### 2022-01-04
 * Need to fix routing > pages do not change to specified component
+    - Edit: Routing is now functioning properly. Next steps are to build out components
+* Deployed to Heroku, but need to configure both front and back end to run simultaneously - currently only backend runs (Whitelabel Error Page)
 
 ### 2022-01-03
 * Front-end in progress
