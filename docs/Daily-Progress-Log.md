@@ -1,5 +1,9 @@
 ## Daily Progress Log
 
+### 2022-01-05
+* Researching how to deploy a full stack application on Heroku
+    - [maybe this?](https://www.codecademy.com/article/deploying-a-full-stack-app-with-heroku)
+
 ### 2022-01-04
 * Need to fix routing > pages do not change to specified component
     - Edit: Routing is now functioning properly. Next steps are to build out components
