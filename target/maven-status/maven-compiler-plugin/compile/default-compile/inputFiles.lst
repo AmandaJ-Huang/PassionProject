@@ -1,6 +1,8 @@
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/xmlattributes/Link.java
+/Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/controllers/UserController.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/xmlattributes/BoardgameElement.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/FmbgApplication.java
+/Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/entities/User.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/xmlattributes/Thumbnail.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/controllers/GamesController.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/entities/Games.java
@@ -8,10 +10,13 @@
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/entities/Categories.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/DataScrapeRunner.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/DataScraper.java
+/Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/services/GameService.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/xmlattributes/Name.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/xmlattributes/Items.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/utils/XmlParser.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/xmlattributes/Statistics.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/datascraper/ignore/xmlattributes/Ratings.java
+/Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/services/UserService.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/entities/Mechanics.java
+/Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/repositories/UserRepo.java
 /Users/huangamanda/Dev/Projects/PassionProject/src/main/java/com/passion/fmbg/entities/GamesList.java
