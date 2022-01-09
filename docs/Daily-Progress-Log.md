@@ -1,5 +1,12 @@
 ## Daily Progress Log
 
+## 2022-01-08
+* Still trying to figure out how to run both front and back ends
+* Changing database to PostgreSQL to align with Heroku provided support
+* Trying to follow tutorials:
+    - https://www.bezkoder.com/angular-12-spring-boot-postgresql/
+    - https://programmingtechie.com/2020/10/10/deploy-spring-boot-and-angular-application-to-heroku/ 
+
 ### 2022-01-05
 * Researching how to deploy a full stack application on Heroku
     - [maybe this?](https://www.codecademy.com/article/deploying-a-full-stack-app-with-heroku)
