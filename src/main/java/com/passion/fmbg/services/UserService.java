@@ -1,4 +1,6 @@
-package test.java.com.passion.fmbg.services;
+package com.passion.fmbg.services;
+
+import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
