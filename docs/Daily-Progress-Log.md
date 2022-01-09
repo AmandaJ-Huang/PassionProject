@@ -1,5 +1,10 @@
 ## Daily Progress Log
 
+## 2022-01-09
+* angular-fmbg import module errors ex. `cannot find module '@angular/router'` resulting from missing `node_modules` package
+    - fixed with `npm install` in project folder
+* removed test angular app from src dir
+
 ## 2022-01-08
 * Still trying to figure out how to run both front and back ends
 * Changing database to PostgreSQL to align with Heroku provided support
