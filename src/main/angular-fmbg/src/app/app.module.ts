@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { FinderComponent } from './components/finder/finder.component';
+import { FoundComponent } from './components/found/found.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FinderComponent } from './components/finder/finder.component';
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    FinderComponent
+    FinderComponent,
+    FoundComponent
   ],
   imports: [
     BrowserModule,
