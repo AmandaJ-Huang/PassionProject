@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app.routing';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { FoundComponent } from './components/found/found.component';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatCardModule,
     HttpClientModule
   ],
   providers: [],

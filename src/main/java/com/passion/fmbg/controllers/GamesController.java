@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.*;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://fmbg.herokuapp.com")
 @RestController
 @RequestMapping("/api")
 public class GamesController {
