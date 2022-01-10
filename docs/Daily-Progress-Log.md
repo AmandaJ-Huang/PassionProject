@@ -1,5 +1,11 @@
 ## Daily Progress Log
 
+## 2022-01-10
+* Ran into issue where srping boot was not refreshing static resource files with updated angular index.html
+    - fix: changed outPath in angular.json to `../resources/public`
+    - need to run `ng build` each time prior to running back end for updates to persist
+    - utilized this answer: https://stackoverflow.com/questions/53854541/how-to-package-angular-project-with-springboot-application 
+
 ## 2022-01-09
 * angular-fmbg import module errors ex. `cannot find module '@angular/router'` resulting from missing `node_modules` package
     - fixed with `npm install` in project folder
