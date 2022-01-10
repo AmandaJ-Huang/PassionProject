@@ -5,7 +5,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +35,9 @@ import { FoundComponent } from './components/found/found.component';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    MatTabsModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

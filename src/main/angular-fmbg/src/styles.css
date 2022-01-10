@@ -5,7 +5,27 @@ html, body { height: 100%; }
 
 body { margin: 0; 
     font-family: 'Lato', sans-serif;
-    font-size: 14px; 
+    font-size: 14px;
+    background-attachment: fixed;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+#container {
+    height: 100%;
+}
+
+#insideDiv {
+    overflow-y: auto;
+}
+
+.container_row {
+    display: grid;
+}
+.navigation-layer {
+    grid-column: 1;
+    grid-row: 1;
+}
+.content-layer {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: -1;
+}
