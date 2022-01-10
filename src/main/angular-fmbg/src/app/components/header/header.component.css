@@ -1,0 +1,27 @@
+mat-toolbar {
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 28px;
+}
+
+img {
+    width: 30px;
+    height: auto;
+    filter: invert(100%);
+    fill:white;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.header-buttons {
+    margin: 8px 8px 8px 0;
+}
+
+button:hover, .mat-elevation-z0:hover {
+    background-color: rgba(0,0,0,0.5);
+}

@@ -1,5 +1,26 @@
 ## Daily Progress Log
 
+## 2022-01-09
+* angular-fmbg import module errors ex. `cannot find module '@angular/router'` resulting from missing `node_modules` package
+    - fixed with `npm install` in project folder
+* removed test angular app from src dir
+
+## 2022-01-08
+* Still trying to figure out how to run both front and back ends
+* Changing database to PostgreSQL to align with Heroku provided support
+* Trying to follow tutorials:
+    - https://www.bezkoder.com/angular-12-spring-boot-postgresql/
+    - https://programmingtechie.com/2020/10/10/deploy-spring-boot-and-angular-application-to-heroku/ 
+
+### 2022-01-05
+* Researching how to deploy a full stack application on Heroku
+    - [maybe this?](https://www.codecademy.com/article/deploying-a-full-stack-app-with-heroku)
+
+### 2022-01-04
+* Need to fix routing > pages do not change to specified component
+    - Edit: Routing is now functioning properly. Next steps are to build out components
+* Deployed to Heroku, but need to configure both front and back end to run simultaneously - currently only backend runs (Whitelabel Error Page)
+
 ### 2022-01-03
 * Front-end in progress
 * Need to connect finder with front-end
