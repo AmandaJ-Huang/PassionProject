@@ -1,5 +1,7 @@
 package main.java.com.passion.fmbg.configs;
 
+import java.util.ResourceBundle;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -15,5 +17,11 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
             .allowedOrigins("https://fmbg.herokuapp.com", "http://localhost:4200", "http://localhost:8080")
             .allowedMethods("PUT", "DELETE", "GET", "POST");
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**")
+            .addResourceLocations("public/");
     }
 }
