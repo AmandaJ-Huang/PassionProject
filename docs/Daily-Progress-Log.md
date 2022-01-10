@@ -4,6 +4,8 @@
 * angular-fmbg import module errors ex. `cannot find module '@angular/router'` resulting from missing `node_modules` package
     - fixed with `npm install` in project folder
 * removed test angular app from src dir
+* connected front and back end via CORS, enabled web mvc in config file
+    - utilized this article to deploy Angular within Spring Boot: https://dev.to/jakmar17/deploying-angular-application-inside-spring-boot-57g7
 
 ## 2022-01-08
 * Still trying to figure out how to run both front and back ends

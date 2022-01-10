@@ -1,1 +1,4 @@
-<p>finder works!</p>
+<button mat-flat-button (click)="findgames()">Find Games</button>
+<div *ngFor="let boardgames of boardgames">
+    {{boardgames.thumb_url}}
+</div>
