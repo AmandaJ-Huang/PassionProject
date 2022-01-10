@@ -1,19 +1,36 @@
-<button mat-flat-button (click)="findgames()">Find Games</button>
+<!-- <section class="filters" [formGroup]="games"> -->
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Categories">
+      <h4>hi hello welcome</h4>
+    </mat-tab>
+    <mat-tab label="Mechanics">
+      <h4>hi hello welcome</h4>
+    </mat-tab>
+    <mat-tab label="# of Players">
+      <h4>hi hello welcome</h4>
+    </mat-tab>
+    <mat-tab label="Minimum Age">
+      <h4>hi hello welcome</h4>
+    </mat-tab>
+    <mat-tab label="Order By">
+      <h4>hi hello welcome</h4>
+    </mat-tab>
+  </mat-tab-group>
+<!-- </section> -->
+
+<button (click)="findgames()">GO →
+</button>
 <div *ngFor="let boardgames of boardgames">
-    <!-- <img src="{{ boardgames.thumb_url }}">
-    <a href="{{ boardgames.url }}">{{ boardgames.name }}</a>
-    # of Players: {{ boardgames.min_players }} - {{ boardgames.max_players }}
-    PlayTime: {{ boardgames.min_playtime }} - {{ boardgames.max_playtime }}
-    Rank: {{ boardgames.rank }}
-    Description: {{ boardgames.description_preview }} -->
-
-
-<mat-card class="example-card">
+<mat-card class="bg-card">
     <mat-card-title-group>
       <mat-card-title><a href="{{ boardgames.url }}">{{ boardgames.name }}</a></mat-card-title>
-      <mat-card-subtitle>
+        <mat-card-subtitle>
           # of Players: {{ boardgames.min_players }} - {{ boardgames.max_players }}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
           PlayTime: {{ boardgames.min_playtime }} - {{ boardgames.max_playtime }}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
           Rank: {{ boardgames.rank }}
         </mat-card-subtitle>
       <img mat-card-md-image src="{{ boardgames.thumb_url }}">
