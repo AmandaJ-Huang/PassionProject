@@ -1,9 +1,25 @@
 <button mat-flat-button (click)="findgames()">Find Games</button>
 <div *ngFor="let boardgames of boardgames">
-    <img src="{{ boardgames.thumb_url }}">
+    <!-- <img src="{{ boardgames.thumb_url }}">
     <a href="{{ boardgames.url }}">{{ boardgames.name }}</a>
     # of Players: {{ boardgames.min_players }} - {{ boardgames.max_players }}
     PlayTime: {{ boardgames.min_playtime }} - {{ boardgames.max_playtime }}
     Rank: {{ boardgames.rank }}
-    Description: {{ boardgames.description_preview }}
+    Description: {{ boardgames.description_preview }} -->
+
+
+<mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title><a href="{{ boardgames.url }}">{{ boardgames.name }}</a></mat-card-title>
+      <mat-card-subtitle>
+          # of Players: {{ boardgames.min_players }} - {{ boardgames.max_players }}
+          PlayTime: {{ boardgames.min_playtime }} - {{ boardgames.max_playtime }}
+          Rank: {{ boardgames.rank }}
+        </mat-card-subtitle>
+      <img mat-card-md-image src="{{ boardgames.thumb_url }}">
+    </mat-card-title-group>
+    <mat-card-content>
+        {{ boardgames.description_preview }}
+    </mat-card-content>
+  </mat-card>
 </div>
