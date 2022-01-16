@@ -20,4 +20,5 @@ datascraper/ignore/xmlattributes/Name.class
 datascraper/ignore/xmlattributes/Items.class
 com/passion/fmbg/entities/Categories.class
 datascraper/ignore/utils/XmlParser.class
+com/passion/fmbg/configs/WebConfig$1.class
 datascraper/ignore/xmlattributes/Thumbnail.class
