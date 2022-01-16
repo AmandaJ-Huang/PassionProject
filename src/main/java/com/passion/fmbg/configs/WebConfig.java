@@ -1,4 +1,4 @@
-package main.java.com.passion.fmbg.configs;
+package com.passion.fmbg.configs;
 
 import java.util.ResourceBundle;
 
