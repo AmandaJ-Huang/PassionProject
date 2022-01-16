@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app.routing';
+import { AppRoutingModule } from "./app-routing.module";
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { FinderComponent } from './components/finder/finder.component';
 import { FoundComponent } from './components/found/found.component';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FoundComponent } from './components/found/found.component';
     MatTabsModule,
     MatCheckboxModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,12 @@
 ## Daily Progress Log
 
+## 2022-01-16
+* Whitelabel Error Page error found, resolved by:
+  - Updating outpath in angular.json to `./static`
+  - Removed `@EnableWebMvc` in WebConfig.java per: https://stackoverflow.com/questions/24661289/spring-boot-not-serving-static-content/33852040#33852040
+    - Updated Resources Handler
+  - Updated pom.xml with retrieving static files from angular-fmbg/static output directory and saving to resources/static
+
 ## 2022-01-10
 * Ran into issue where srping boot was not refreshing static resource files with updated angular index.html
     - fix: changed outPath in angular.json to `../resources/public`
