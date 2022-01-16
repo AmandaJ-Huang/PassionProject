@@ -7,15 +7,15 @@ datascraper/ignore/xmlattributes/Link.class
 com/passion/fmbg/repositories/UserRepo.class
 com/passion/fmbg/entities/GamesList.class
 datascraper/ignore/xmlattributes/Statistics.class
-main/java/com/passion/fmbg/services/GameService.class
 com/passion/fmbg/entities/User.class
 com/passion/fmbg/FmbgApplication.class
 com/passion/fmbg/entities/Mechanics.class
 com/passion/fmbg/entities/Games.class
 datascraper/ignore/xmlattributes/BoardgameElement.class
 datascraper/ignore/xmlattributes/Item.class
-main/java/com/passion/fmbg/configs/WebConfig.class
+com/passion/fmbg/configs/WebConfig.class
 com/passion/fmbg/controllers/UserController.class
+com/passion/fmbg/services/GameService.class
 datascraper/ignore/xmlattributes/Name.class
 datascraper/ignore/xmlattributes/Items.class
 com/passion/fmbg/entities/Categories.class
