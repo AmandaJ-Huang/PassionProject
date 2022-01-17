@@ -1,3 +1,7 @@
-.navbar {
-    background-image: none;
+.container {
+  max-width: 900px;
+  max-height: 600px;
+  margin: auto;
 }
+
+
