@@ -13,9 +13,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { FinderComponent } from './components/finder/finder.component';
+import { HomeComponent } from './components/home';
+import { AboutComponent } from './components/about';
+import { FinderComponent } from './components/finder';
 import { FoundComponent } from './components/found/found.component';
 import { RouterModule } from "@angular/router";
 

@@ -1,17 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&family=Nunito:wght@500&display=swap');
 
-html, body { height: 100%; }
+html { height: 100%; }
 
-body { margin: 0;
+body {
+    height: 100%;
+    margin: 0;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
+    background: rgb(40,53,147);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 90%, rgba(40,53,147,1) 0%);
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-#container {
-    height: 100%;
-}
 
 #insideDiv {
     overflow-y: auto;
