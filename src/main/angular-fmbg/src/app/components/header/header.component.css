@@ -1,6 +1,7 @@
 mat-toolbar {
     height: 100%;
-    background-color: #283593;
+    background-color: #eeeeee;
+    border-bottom: 1px solid #323232;
 }
 
 mat-icon {
@@ -8,14 +9,15 @@ mat-icon {
 }
 
 button {
-  background-color: #283593;
-  color: white;
+  background-color: #eeeeee;
+  color: #323232;
 }
 
 h1 {
     font-family: 'Righteous', cursive;
-    font-size: 20px;
-    color: white;
+    font-size: 22px;
+    color: #323232;
+    margin-left: 40px;
 }
 
 img {
@@ -30,7 +32,7 @@ img {
 }
 
 .header-buttons {
-    margin: 8px 8px 8px 0;
+    margin: 8px 50px 8px 0;
 }
 
 button:hover, .mat-elevation-z0:hover {

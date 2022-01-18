@@ -11,13 +11,29 @@
 .vertically-centered {
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 30%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-.button-slide {
+.home {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+  position: center;
+  font-family: Roboto, sans-serif;
+  font-style: inherit;
+  border: 1px solid #323232;
+  border-radius: 8px;
+  max-width: 50%;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
   color: #E91E63;
+  background-color: white;
   border: 2px solid #E91E63;
   border-radius: 0;
   padding: 18px 36px;
@@ -28,11 +44,9 @@
   cursor: pointer;
   box-shadow: inset 0 0 0 0 #E91E63;
   -webkit-transition: ease-out 0.5s;
-  /*-moz-transition: ease-out 0.5s;*/
-  /*transition: ease-out 0.5s;*/
 }
 
-.slide-right:hover {
+button:hover {
   color: #ffffff;
   box-shadow: inset 400px 0 0 0 #E91E63;
 }

@@ -11,7 +11,8 @@ export class BoardgamesService {
 
   baseUrl = environment.baseUrl;
 
-  constructor(private http: HttpClient) { 
+
+  constructor(private http: HttpClient) {
   }
 
   findGames(): Observable<Boardgames[]> {
