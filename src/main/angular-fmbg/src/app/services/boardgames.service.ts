@@ -11,11 +11,10 @@ export class BoardgamesService {
 
   baseUrl = environment.baseUrl;
 
-
   constructor(private http: HttpClient) {
   }
 
-  findGames(): Observable<Boardgames[]> {
-    return this.http.get<Boardgames[]>(this.baseUrl + '/api/finder?');
+  findGames(params: any): Observable<Boardgames[]> {
+    return this.http.get<Boardgames[]>(this.baseUrl + '/api/finder?' + { params });
   }
 }

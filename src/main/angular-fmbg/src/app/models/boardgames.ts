@@ -12,6 +12,8 @@ export class Boardgames {
     thumb_url?: string;
     rank?: number;
     complexity?: number;
+    categories?: string | undefined;
+    order_by?: string;
 
     // TODO: create classes? or bring in json?
     // mechanics[]: string;

@@ -13,26 +13,30 @@ button {
   color: #323232;
 }
 
-h1 {
+a {
     font-family: 'Righteous', cursive;
     font-size: 22px;
     color: #323232;
-    margin-left: 40px;
+    margin-left: 25px;
 }
 
-img {
-    width: 30px;
-    height: auto;
-    filter: invert(100%);
-    fill:white;
+a:link {
+  text-decoration: none;
 }
+
+/*img {*/
+/*    width: 30px;*/
+/*    height: auto;*/
+/*    filter: invert(100%);*/
+/*    fill:white;*/
+/*}*/
 
 .spacer {
     flex: 1 1 auto;
 }
 
 .header-buttons {
-    margin: 8px 50px 8px 0;
+    margin: 8px 8px 8px 0;
 }
 
 button:hover, .mat-elevation-z0:hover {

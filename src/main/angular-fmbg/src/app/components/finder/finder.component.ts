@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Boardgames } from 'src/app/models/boardgames';
 import { BoardgamesService } from 'src/app/services/boardgames.service';
-import { FormControl, FormGroup } from "@angular/forms";
+import {HttpParams} from "@angular/common/http";
+
 
 @Component({
   selector: 'app-finder',
@@ -10,30 +11,22 @@ import { FormControl, FormGroup } from "@angular/forms";
 })
 export class FinderComponent implements OnInit {
   boardgames?: Boardgames[];
-  categories: any;
-  mechanics: any;
-  players: any;
-  minage: any;
-  orderby: any;
-  finderForm: FormGroup | any;
-  profileForm: Boolean | undefined;
 
   constructor(private boardgamesService: BoardgamesService) {
-    let finderForm = new FormGroup({
-      categories: new FormControl(''),
-      mechanics: new FormControl(''),
-      players: new FormControl(''),
-      minage: new FormControl(''),
-      orderby: new FormControl('')
 
-    });
   }
 
   ngOnInit(): void {
   }
 
-  findgames(): void {
-    this.boardgamesService.findGames()
+  onSubmit(): void {
+    const params = "min_age=10";
+    this.findgames(params);
+    console.log(params);
+  }
+
+  findgames(params: any): void {
+    this.boardgamesService.findGames(params)
       .subscribe(
         data => {
           this.boardgames = data;

@@ -11,7 +11,7 @@
 .vertically-centered {
   margin: 0;
   position: absolute;
-  top: 30%;
+  top: 25%;
 }
 
 
@@ -23,7 +23,7 @@
 .home {
   margin: 0;
   position: absolute;
-  top: 45%;
+  top: 40%;
   width: 600px;
   padding: 8px;
 
@@ -59,7 +59,7 @@
   margin-right: auto;
 }
 
-button {
+.homebtn {
   color: #323232;
   background-color: #eeeeee;
   border: 0;
