@@ -8,9 +8,7 @@ body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
-    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
 }
 
 

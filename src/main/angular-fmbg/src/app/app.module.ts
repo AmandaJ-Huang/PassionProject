@@ -16,7 +16,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home';
 import { AboutComponent } from './components/about';
 import { FinderComponent } from './components/finder';
-import { FoundComponent } from './components/found/found.component';
 import { RouterModule } from "@angular/router";
 
 @NgModule({
@@ -25,8 +24,7 @@ import { RouterModule } from "@angular/router";
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    FinderComponent,
-    FoundComponent
+    FinderComponent
   ],
   imports: [
     BrowserModule,
