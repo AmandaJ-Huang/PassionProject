@@ -8,16 +8,16 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { FinderComponent } from './components/finder/finder.component';
-import { FoundComponent } from './components/found/found.component';
+import { HomeComponent } from './components/home';
+import { AboutComponent } from './components/about';
+import { FinderComponent } from './components/finder';
 import { RouterModule } from "@angular/router";
+import { FinderFormComponent } from './components/finder-form/finder-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { RouterModule } from "@angular/router";
     HomeComponent,
     AboutComponent,
     FinderComponent,
-    FoundComponent
+    FinderFormComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +39,7 @@ import { RouterModule } from "@angular/router";
     MatTabsModule,
     MatCheckboxModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     RouterModule
   ],

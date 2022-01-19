@@ -1,15 +1,16 @@
 <!-- <section class="filters" [formGroup]="games"> -->
+
   <mat-tab-group mat-align-tabs="center">
     <mat-tab label="Categories">
       <h4>hi hello welcome</h4>
     </mat-tab>
-    <mat-tab label="Mechanics">
+    <mat-tab label="Number of Players">
       <h4>hi hello welcome</h4>
     </mat-tab>
-    <mat-tab label="# of Players">
+    <mat-tab label="Play Time">
       <h4>hi hello welcome</h4>
     </mat-tab>
-    <mat-tab label="Minimum Age">
+    <mat-tab label="Age">
       <h4>hi hello welcome</h4>
     </mat-tab>
     <mat-tab label="Order By">
@@ -18,7 +19,7 @@
   </mat-tab-group>
 <!-- </section> -->
 
-<div><button (click)="findgames()">GO →</button></div>
+<div><button (click)="onSubmit()">GO →</button></div>
 <div *ngFor="let boardgames of boardgames">
 <mat-card class="bg-card">
     <mat-card-title-group>

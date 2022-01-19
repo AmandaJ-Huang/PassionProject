@@ -4,16 +4,15 @@
 </style>
 
 <!-- Navigation -->
-<mat-toolbar color="primary">
-    <mat-icon>tips_and_updates</mat-icon>&nbsp;
-    <h1>{{ title }}</h1>
+<mat-toolbar>
+    <a routerLink="/">{{ title }}</a>
     <span class="spacer"></span>
     <span class="header-buttons">
-        <button mat-flat-button color="primary" routerLink="/">HOME</button> &nbsp;
-        <button mat-flat-button color="primary" routerLink="/about">ABOUT</button> &nbsp;
-        <button mat-flat-button color="primary" routerLink="/finder">FINDER</button>
+        <button mat-flat-button routerLink="/">HOME</button> &nbsp;
+        <button mat-flat-button routerLink="/about">ABOUT</button> &nbsp;
+        <button mat-flat-button routerLink="/finder">FINDER</button>
     </span>
-    <button mat-mini-fab color="primary" class="mat-elevation-z0">
-        <mat-icon>settings</mat-icon>
-    </button>
+<!--    <button mat-mini-fab color="primary" class="mat-elevation-z0">-->
+<!--        <mat-icon>settings</mat-icon>-->
+<!--    </button>-->
 </mat-toolbar>

@@ -1,18 +1,35 @@
 mat-toolbar {
     height: 100%;
+    background-color: #eeeeee;
+    border-bottom: 1px solid #323232;
 }
 
-h1 {
+mat-icon {
+  color: white;
+}
+
+button {
+  background-color: #eeeeee;
+  color: #323232;
+}
+
+a {
     font-family: 'Righteous', cursive;
-    font-size: 28px;
+    font-size: 22px;
+    color: #323232;
+    margin-left: 25px;
 }
 
-img {
-    width: 30px;
-    height: auto;
-    filter: invert(100%);
-    fill:white;
+a:link {
+  text-decoration: none;
 }
+
+/*img {*/
+/*    width: 30px;*/
+/*    height: auto;*/
+/*    filter: invert(100%);*/
+/*    fill:white;*/
+/*}*/
 
 .spacer {
     flex: 1 1 auto;

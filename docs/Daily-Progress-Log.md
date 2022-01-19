@@ -1,5 +1,11 @@
 ## Daily Progress Log
 
+## 2022-01-17 to 2022-01-18
+* Updated overall style, homepage mostly complete at this point
+* Currently working on http params or some way to generate dynamic uri in the front end
+  - maybe this? https://stackoverflow.com/questions/51024982/how-to-create-a-url-string-with-query-parameters-from-an-object-in-angular-5
+  - or this? https://stackoverflow.com/questions/45210406/angular-4-3-httpclient-set-params
+
 ## 2022-01-16
 * Whitelabel Error Page error found, resolved by:
   - Updating outpath in angular.json to `./static`
