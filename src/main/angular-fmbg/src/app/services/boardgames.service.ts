@@ -15,6 +15,7 @@ export class BoardgamesService {
   }
 
   findGames(params: any): Observable<Boardgames[]> {
-    return this.http.get<Boardgames[]>(this.baseUrl + '/api/finder?', { params: params });
+    let fullUrl = this.baseUrl + '/api/finder?' + params;
+    return this.http.get<Boardgames[]>(fullUrl);
   }
 }

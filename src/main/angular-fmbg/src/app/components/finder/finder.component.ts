@@ -19,8 +19,9 @@ export class FinderComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const params = new HttpParams();
-      params.set('min_age', '10');
+    let params = new HttpParams()
+      .set('lt_max_players', '3')
+      .set('gt_min_players', '2');
     this.findgames(params.toString());
     console.log(params);
   }
