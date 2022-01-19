@@ -18,7 +18,8 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-            .allowedOrigins("https://fmbg.herokuapp.com", "http://localhost:4200", "http://localhost:8080")
+//            .allowedOrigins("https://fmbg.herokuapp.com", "http://localhost:4200", "http://localhost:8080")
+                .allowedOrigins("*")
             .allowedMethods("PUT", "DELETE", "GET", "POST");
     }
 

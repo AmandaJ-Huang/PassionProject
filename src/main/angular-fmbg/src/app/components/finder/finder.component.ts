@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Boardgames } from 'src/app/models/boardgames';
 import { BoardgamesService } from 'src/app/services/boardgames.service';
 import { HttpParams } from "@angular/common/http";
+import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-finder',
   templateUrl: './finder.component.html',
   styleUrls: ['./finder.component.css']
 })
+
 export class FinderComponent implements OnInit {
   boardgames?: Boardgames[];
 
