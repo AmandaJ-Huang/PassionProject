@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Boardgames } from '../models/boardgames';
 import { environment } from 'src/environments/environment';
@@ -15,6 +15,6 @@ export class BoardgamesService {
   }
 
   findGames(params: any): Observable<Boardgames[]> {
-    return this.http.get<Boardgames[]>(this.baseUrl + '/api/finder?' + { params });
+    return this.http.get<Boardgames[]>(this.baseUrl + '/api/finder?', { params: params });
   }
 }
