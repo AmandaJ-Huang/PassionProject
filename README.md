@@ -7,7 +7,7 @@ Find Me a Board Game! or FMBG is a personal passion project to help users find a
 ### Tech Stack
 * **Frontend**: Angular
 * **Business** Logic: Java (Spring Boot)
-* **Cloud**: [Heroku](https://camp-r.herokuapp.com/)
+* **Cloud**: [Heroku](https://fmbg.herokuapp.com/)
 
 ### Resources Reference
 * [**Board Game Atlas API**](https://www.boardgameatlas.com/api/docs): Free REST API of known board game data courtesy of **Board Game Atlas**.
